@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>WacaMo</title>
+    <link href="WacaMo.css" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+        <div id="ctr">
+            <div id="board" class="clearfix">
+                <img src="ren.png" style="width: 280px" class="butt" title="Hit Stimpy" onclick="Ren()">
+                <div id="time">
+                    <p></p>
+                    <span>Time Left</span>
+                </div>
+                <img src="horse.gif" style="width: 345px" title="No sir, I don't like it !">
+                <div id="score">
+                    <p></p>
+                    <span>Score</span>
+                </div>
+                <img src="stimpy.png" style="width: 200px" class="butt" title="Hit Ren" onclick="Stimpy()">
+            </div>
+            <div id="over">
+                <img src="go.png">
+            </div>
+            <div id="field" class="wait">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="WacaMo.js" type="text/javascript"></script>
+<script>
+    var x = new Whack();
+    function Ren(){
+        x.startGame("S")
+    }
+    function Stimpy(){
+        x.startGame("R")
+    }
+</script>
+</html>

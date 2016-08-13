@@ -1,0 +1,155 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+body {
+    background-color: black;
+}
+#main::after {
+    background: rgba(0, 0, 0, 0) url("r&s01.png") repeat scroll 0 0 / 13% auto;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0.1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+#ctr {
+    background: rgba(0, 0, 0, 0) url("room.jpg") repeat scroll 0 -387px / 110% auto;
+    width: 1400px;
+    height: 843px;
+    margin: 0 auto;
+    position: relative;
+}
+#board {
+    background-color: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    width: 1400px;
+    height: 245px;
+    overflow: hidden;
+}
+#board > div {
+    position: absolute;
+    text-align: center;
+    top: 20px;
+    width: 120px;
+}
+#board > div > p{
+    border: 5px groove red;
+    font-size: 45px;
+    padding: 5px;
+}
+#board > div > span{
+    font-size: 25px;
+}
+#board > #time{
+    left: 450px;
+}
+#board > #score{
+    left: 780px;
+}
+#board > img:not(.butt){
+    position: absolute;
+    left: 550px;
+}
+.butt {
+    margin: 10px 125px;
+    position: relative;
+    cursor: pointer;
+}
+.butt:first-of-type {
+    right: 0;
+    float: right;
+}
+.butt:last-of-type {
+    left: 0;
+    float: left;
+    bottom: -25px;
+}
+#over {
+    background-color: rgba(0, 0, 0, 0.55);
+    bottom: 0;
+    height: 598px;
+    position: absolute;
+    visibility: hidden;
+    width: 100%;
+    z-index: 6;
+}
+#over > img{
+    margin: 8% 32%;
+    width: 35%;
+}
+#field {
+/*    background-color: green;
+    height: 500px;*/
+    bottom: -493px;
+    height: 350px;
+    position: relative;
+}
+.hit {
+    cursor: url(./clubHit.png), auto;
+}
+.wait {
+    cursor: url(./club.png), auto;
+}
+.cnt {
+ /*   background-color: black;*/
+    width: 100px;
+	height: 100px;
+    position: absolute;
+}
+
+.cnt > .hole {
+    bottom: 0;
+    height: 33px;
+	width: 100px;
+    position: absolute;
+}
+.cnt > .chr {
+    height: 90px;
+    width: 80px;
+	left: 10px;
+	overflow: hidden;
+	position: absolute;	
+}
+.cnt > .chr > div {
+ /*   background-color: yellow;*/
+    height: 95px;
+	width: 80px;
+    transform: translateY(90px);
+}
+
+.s3 {
+    animation-name: KILL;
+    animation-duration: 1s;
+}
+.s2 {
+    animation-name: KILL;
+    animation-duration: 2s;
+}
+.s1 {
+    animation-name: KILL;
+    animation-duration: 3s;
+}
+@keyframes KILL {
+    0% {
+        transform: translateY(90px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(90px);
+    }
+}
